@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "IDが一致するFAQのカテゴリが見つかりませんでした";
 
 "GIFs are not supported" = "GIFはサポートされていません";
+
+"Reply from customer support" = "カスタマーサポートからの返信";
+"Failed to send the message" = "メッセージの送信に失敗しました";
+"Start a new Conversation" = "新しい会話を開始する";
+"Audio" = "オーディオ";
+"Video" = "ビデオ";
+"File" = "ファイル";
+"Would you like to review the app?" = "あなたはアプリを評価しますか？";

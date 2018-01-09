@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "பொருந்தும் ஐடியுடன் FAQ பிரிவைக் கண்டறிய முடியவில்லை";
 
 "GIFs are not supported" = "GIF கள் ஆதரிக்கப்படவில்லை";
+
+"Reply from customer support" = "வாடிக்கையாளர் ஆதரவு இருந்து பதில்";
+"Failed to send the message" = "செய்தியை அனுப்ப முடியவில்லை";
+"Start a new Conversation" = "புதிய உரையாடலைத் தொடங்கவும்";
+"Audio" = "ஆடியோ";
+"Video" = "காணொளி";
+"File" = "கோப்பு";
+"Would you like to review the app?" = "பயன்பாட்டை மதிப்பிட விரும்புகிறீர்களா?";

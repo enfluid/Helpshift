@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "या ID शी जुळणारा FAQ आम्ही शोधू शकलो नाही";
 
 "GIFs are not supported" = "GIF समर्थित नाहीत";
+
+"Reply from customer support" = "ग्राहक समर्थनातून प्रत्युत्तर द्या";
+"Failed to send the message" = "संदेश पाठविण्यात अयशस्वी";
+"Start a new Conversation" = "एक नवीन संभाषण प्रारंभ करा";
+"Audio" = "ऑडिओ";
+"Video" = "व्हिडिओ";
+"File" = "फाईल";
+"Would you like to review the app?" = "आपण अॅपला रेट करू इच्छिता?";

@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Не удалось найти раздел ЧаВо с таким идентификатором";
 
 "GIFs are not supported" = "GIF не поддерживаются";
+
+"Reply from customer support" = "Ответ от поддержки клиентов";
+"Failed to send the message" = "Не удалось отправить сообщение";
+"Start a new Conversation" = "Начать новый разговор";
+"Audio" = "аудио";
+"Video" = "видео";
+"File" = "файл";
+"Would you like to review the app?" = "Вы хотите оценить приложение?";

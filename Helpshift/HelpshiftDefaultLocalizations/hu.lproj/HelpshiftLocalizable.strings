@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Nem találtunk egyező azonosítójú GYIK-részt.";
 
 "GIFs are not supported" = "A GIF-ek nem támogatottak";
+
+"Reply from customer support" = "Válasz az ügyfélszolgálatból";
+"Failed to send the message" = "Nem sikerült elküldeni az üzenetet";
+"Start a new Conversation" = "Új beszélgetés indítása";
+"Audio" = "Hang";
+"Video" = "Videó";
+"File" = "fájl";
+"Would you like to review the app?" = "Szeretné értékelni az alkalmazást?";

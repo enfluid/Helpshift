@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "일치하는 ID로 FAQ 섹션을 찾을 수 없습니다.";
 
 "GIFs are not supported" = "GIF는 지원되지 않습니다.";
+
+"Reply from customer support" = "고객 지원 센터에 회신";
+"Failed to send the message" = "메시지를 보내지 못했습니다.";
+"Start a new Conversation" = "새 대화 시작";
+"Audio" = "오디오";
+"Video" = "비디오";
+"File" = "파일";
+"Would you like to review the app?" = "앱을 평가 하시겠습니까?";

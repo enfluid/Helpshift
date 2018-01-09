@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "我們無法找到具有匹配 ID 的常見問題章節";
 
 "GIFs are not supported" = "不支持GIF";
+
+"Reply from customer support" = "來自客戶支持的回复";
+"Failed to send the message" = "無法發送消息";
+"Start a new Conversation" = "開始一個新的對話";
+"Audio" = "音頻";
+"Video" = "文件";
+"File" = "文件";
+"Would you like to review the app?" = "您要查看應用程式嗎？";

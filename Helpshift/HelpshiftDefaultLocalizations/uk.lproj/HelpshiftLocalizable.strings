@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Розділ FAQ з таким ідентифікатором не знайдено";
 
 "GIFs are not supported" = "GIF-файли не підтримуються";
+
+"Reply from customer support" = "Відповідь від служби підтримки клієнтів";
+"Failed to send the message" = "Не вдалося надіслати повідомлення";
+"Start a new Conversation" = "Почніть нову бесіду";
+"Audio" = "Аудіо";
+"Video" = "Відео";
+"File" = "Файл";
+"Would you like to review the app?" = "Хочете оцінити додаток?";

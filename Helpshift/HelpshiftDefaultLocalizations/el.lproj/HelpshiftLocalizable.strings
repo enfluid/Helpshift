@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Δεν βρέθηκε ενότητα \"Συνήθεις ερωτήσεις\" με αντίστοιχο αναγνωριστικό";
 
 "GIFs are not supported" = "Τα GIF δεν υποστηρίζονται";
+
+"Reply from customer support" = "Απάντηση από την υποστήριξη πελατών";
+"Failed to send the message" = "Αποτυχία αποστολής του μηνύματος";
+"Start a new Conversation" = "Ξεκινήστε μια νέα συνομιλία";
+"Audio" = "Ήχος";
+"Video" = "βίντεο";
+"File" = "αρχείο";
+"Would you like to review the app?" = "Θα θέλατε να αξιολογήσετε την εφαρμογή;";

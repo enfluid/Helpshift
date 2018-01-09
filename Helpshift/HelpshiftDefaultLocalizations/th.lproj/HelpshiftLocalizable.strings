@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "เราค้นหาส่วนคำถามที่พบบ่อยที่มี ID ตรงกันไม่พบ";
 
 "GIFs are not supported" = "GIF ไม่ได้รับการสนับสนุน";
+
+"Reply from customer support" = "คำตอบจากฝ่ายสนับสนุนลูกค้า";
+"Failed to send the message" = "ไม่สามารถส่งข้อความ";
+"Start a new Conversation" = "เริ่มการสนทนาใหม่";
+"Audio" = "เสียง";
+"Video" = "วีดีโอ";
+"File" = "ไฟล์";
+"Would you like to review the app?" = "คุณต้องการให้คะแนนแอปหรือไม่";

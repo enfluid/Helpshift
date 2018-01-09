@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "لم نستطع العثور على قسم أسئلة متداولة يتطابق مع معرّف";
 
 "GIFs are not supported" = "ملفات جيف غير معتمدة";
+
+"Reply from customer support" = "الرد من دعم العملاء";
+"Failed to send the message" = "أخفق إرسال الرسالة";
+"Start a new Conversation" = "بدء محادثة جديدة";
+"Audio" = "سمعي";
+"Video" = "فيديو";
+"File" = "ملف";
+"Would you like to review the app?" = "هل ترغب في مراجعة التطبيق؟";

@@ -36,7 +36,7 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "New message from Support" = "Nuovo messaggio dall'assistenza";
 "Question" = "Domanda";
 "Type in a new message" = "Digita un nuovo messaggio";
-"Email (optional)" = "E-mail (optional)";
+"Email (optional)" = "E-mail (opzionale)";
 "Reply" = "Rispondi";
 "CONTACT US" = "CONTATTACI";
 "Email" = "E-mail";
@@ -148,3 +148,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Impossibile trovare una sezione Domande frequenti con l'ID corrispondente.";
 
 "GIFs are not supported" = "I GIF non sono supportati";
+
+"Reply from customer support" = "Risposta dal supporto clienti";
+"Failed to send the message" = "Impossibile inviare il messaggio";
+"Start a new Conversation" = "Avviare una nuova conversazione";
+"Audio" = "Audio";
+"Video" = "Video";
+"File" = "File";
+"Would you like to review the app?" = "Vuoi rivedere l'applicazione?";

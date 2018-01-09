@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Nepodařilo se nám najít oddíl s často kladenými otázkami s tímto ID";
 
 "GIFs are not supported" = "GIF nejsou podporovány";
+
+"Reply from customer support" = "Odpověď od zákaznické podpory";
+"Failed to send the message" = "Odeslání zprávy se nezdařilo";
+"Start a new Conversation" = "Zahajte novou konverzaci";
+"Audio" = "Zvuk";
+"Video" = "Video";
+"File" = "Soubor";
+"Would you like to review the app?" = "Chtěli byste aplikaci zkontrolovat?";

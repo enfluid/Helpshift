@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Der blev ikke fundet en OSS-sektion med et matchende ID";
 
 "GIFs are not supported" = "GIF'er understøttes ikke";
+
+"Reply from customer support" = "Svar fra kundesupport";
+"Failed to send the message" = "Kunne ikke sende beskeden";
+"Start a new Conversation" = "Start en ny samtale";
+"Audio" = "Lyd";
+"Video" = "Video";
+"File" = "Fil";
+"Would you like to review the app?" = "Vil du gerne gennemgå appen?";
