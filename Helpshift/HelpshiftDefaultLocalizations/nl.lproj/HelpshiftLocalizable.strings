@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "We konden geen FAQ-gedeelte vinden met overeenkomstige ID";
 
 "GIFs are not supported" = "GIF's worden niet ondersteund";
+
+"Reply from customer support" = "Antwoord van klantenondersteuning";
+"Failed to send the message" = "Het bericht is niet verzonden";
+"Start a new Conversation" = "Start een nieuw gesprek";
+"Audio" = "Audio";
+"Video" = "Video";
+"File" = "het dossier";
+"Would you like to review the app?" = "Wilt u de app beoordelen?";

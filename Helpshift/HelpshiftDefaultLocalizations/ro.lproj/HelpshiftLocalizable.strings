@@ -148,3 +148,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Nu am putut găsi o secțiune Întrebări frecvente cu același ID";
 
 "GIFs are not supported" = "GIF-urile nu sunt acceptate";
+
+"Reply from customer support" = "Răspundeți de la asistența pentru clienți";
+"Failed to send the message" = "Eroare la trimiterea mesajului";
+"Start a new Conversation" = "Începeți o nouă conversație";
+"Audio" = "Audio";
+"Video" = "Video";
+"File" = "Fişier";
+"Would you like to review the app?" = "Doriți să evaluați aplicația?";

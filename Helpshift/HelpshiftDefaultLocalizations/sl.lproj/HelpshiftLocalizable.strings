@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Razdelka s pogostimi vprašanji in odgovori, ki bi imel enak ID, ni bilo mogoče najti";
 
 "GIFs are not supported" = "GIF-ji niso podprti";
+
+"Reply from customer support" = "Odgovor na podporo strankam";
+"Failed to send the message" = "Sporočilo ni bilo mogoče poslati";
+"Start a new Conversation" = "Začnite nov pogovor";
+"Audio" = "Avdio";
+"Video" = "Video";
+"File" = "Mapa";
+"Would you like to review the app?" = "Ali želite pregledati aplikacijo?";

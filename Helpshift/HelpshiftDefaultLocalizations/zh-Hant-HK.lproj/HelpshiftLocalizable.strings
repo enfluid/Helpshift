@@ -42,7 +42,6 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "Email" = "電子郵件";
 "Like" = "讚";
 "Tap here if this FAQ was not helpful to you" = "若此常見問題對您沒有幫助，請點擊此處";
-"Read FAQ" = "閱讀常見問題";
 "Any other feedback? (optional)" = "有其他意見嗎？（選填）";
 "You found this helpful." = "您覺得這很有幫助。";
 "No working Internet connection is found." = "找不到可用的網際網路連線。";
@@ -92,7 +91,7 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "Report a problem" = "回報問題";
 "YES, THANKS!" = "是的，謝謝！";
 "Was this helpful?" = "這是否有幫助？";
-"Your message was not sent.Tap \"Try Again\" to send this message?" = "您的訊息未送出。要點擊「再試一次」來傳送此訊息嗎?";
+"Your message was not sent.Tap \"Try Again\" to send this message?" = "您的訊息未送出。要點擊「再試一次」來傳送此訊息嗎？";
 "Suggestions" = "建議事項";
 "No FAQs found" = "找不到常見問題集";
 "Done" = "完成";
@@ -127,6 +126,7 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "Inbox" = "收件匣";
 "Remove attachment" = "移除附件";
 "Could not fetch message" = "無法取得訊息";
+"Read FAQ" = "閱讀常見問題";
 "Sorry! This conversation was closed due to inactivity. Please start a new conversation with our agents." = "很抱歉，本對話因沒有活動，現已關閉。請開始新對話來和我們的服務人員聯繫。";
 "%d new messages from Support" = "支援團隊送來 %d 則新訊息";
 "Ok, Attach" = "好的，附加";
@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "我們無法找到具有匹配 ID 的常見問題章節";
 
 "GIFs are not supported" = "不支持GIF";
+
+"Reply from customer support" = "來自客戶支持的回复";
+"Failed to send the message" = "無法發送消息";
+"Start a new Conversation" = "開始一個新的對話";
+"Audio" = "音頻";
+"Video" = "文件";
+"File" = "文件";
+"Would you like to review the app?" = "您要查看應用程式嗎？";

@@ -1,6 +1,6 @@
 /*
  *    HelpshiftCore.h
- *    SDK Version 6.2.0
+ *    SDK Version 6.4.1
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -19,9 +19,9 @@
 - (void) _registerDeviceToken:(NSData *)deviceToken;
 - (BOOL) _handleRemoteNotification:(NSDictionary *)notification withController:(UIViewController *)viewController;
 - (BOOL) _handleRemoteNotification:(NSDictionary *)notification isAppLaunch:(BOOL)isAppLaunch withController:(UIViewController *)viewController;
-- (BOOL) _handleLocalNotification:(UILocalNotification *)notification withController:(UIViewController *)viewController;
+- (BOOL) _handleLocalNotificationWithUserInfoDictionary:(NSDictionary *)userInfo withController:(UIViewController *)viewController;
 - (void) _handleInteractiveRemoteNotification:(NSDictionary *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler;
-- (void) _handleInteractiveLocalNotification:(UILocalNotification *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler;
+- (void) _handleInteractiveLocalNotification:(NSDictionary *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler;
 - (void) _handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler;
 - (BOOL) _setSDKLanguage:(NSString *)langCode;
 
@@ -125,6 +125,7 @@ typedef enum HsEnableContactUs
 @property (strong, nonatomic) NSArray *customContactUsFlows;
 @property (strong, nonatomic) HelpshiftFAQFilter *withTagsMatching;
 @property (strong, nonatomic) HelpshiftSupportMetaData *customMetaData;
+@property (strong, nonatomic) NSDictionary *customIssueFields;
 @property (strong, nonatomic) NSDictionary *extraConfig;
 
 - (HelpshiftAPIConfig *) build;
@@ -137,7 +138,6 @@ typedef enum HsEnableContactUs
 @interface HelpshiftCore : NSObject
 /**
  *  Initialize the HelpshiftCore class with an instance of the Helpshift service which you want to use.
- *
  *  @param apiProvider An implementation of the HsApiProvider protocol. Current implementors of this service are the HelpshiftCampaigns, HelpshiftSupport and HelpshiftAll classes.
  */
 + (void) initializeWithProvider:(id <HsApiProvider>)apiProvider;
@@ -145,25 +145,20 @@ typedef enum HsEnableContactUs
 /** Initialize helpshift support
  *
  * When initializing Helpshift you must pass these three tokens. You initialize Helpshift by adding the following lines in the implementation file for your app delegate, ideally at the top of application:didFinishLaunchingWithOptions. This method can throw the InstallException asynchronously if the install keys are not in the correct format.
- *
  *  @param apiKey This is your developer API Key
  *  @param domainName This is your domain name without any http:// or forward slashes
  *  @param appID This is the unique ID assigned to your app
- *
- *  Available in SDK version 5.0.0 or later
+ *  @available Available in SDK version 5.0.0 or later
  */
 + (void) installForApiKey:(NSString *)apiKey domainName:(NSString *)domainName appID:(NSString *)appID;
 
 /** Initialize helpshift support
- *
  * When initializing Helpshift you must pass these three tokens. You initialize Helpshift by adding the following lines in the implementation file for your app delegate, ideally at the top of application:didFinishLaunchingWithOptions. This method can throw the InstallException asynchronously if the install keys are not in the correct format.
- *
  * @param apiKey This is your developer API Key
  * @param domainName This is your domain name without any http:// or forward slashes
  * @param appID This is the unique ID assigned to your app
  * @param optionsDictionary This is the dictionary which contains additional configuration options for the HelpshiftSDK.
- *
- * Available in SDK version 5.0.0 or later
+ * @available Available in SDK version 5.0.0 or later
  */
 
 + (void) installForApiKey:(NSString *)apiKey domainName:(NSString *)domainName appID:(NSString *)appID withOptions:(NSDictionary *)optionsDictionary __deprecated;
@@ -171,124 +166,85 @@ typedef enum HsEnableContactUs
 /** Initialize helpshift support
  *
  * When initializing Helpshift you must pass these three tokens. You initialize Helpshift by adding the following lines in the implementation file for your app delegate, ideally at the top of application:didFinishLaunchingWithOptions
- *
  * @param apiKey This is your developer API Key
  * @param domainName This is your domain name without any http:// or forward slashes
  * @param appID This is the unique ID assigned to your app
  * @param configObject This is the install config object which contains additional configuration options for the HelpshiftSDK.
- *
  * @available Available in SDK version 5.7.0 or later
  */
 
 + (void) installForApiKey:(NSString *)apiKey domainName:(NSString *)domainName appID:(NSString *)appID withConfig:(HelpshiftInstallConfig *)configObject;
 /** Login a user with a given identifier
- *
  * The identifier uniquely identifies the user. Name and email are optional.
- *
  * @param identifier The unique identifier of the user.
  * @param name The name of the user.
  * @param email The email of the user.
- *
- * Available in SDK version 5.0.0 or later
- *
+ * @available Available in SDK version 5.0.0 or later
  */
 + (void) loginWithIdentifier:(NSString *)identifier withName:(NSString *)name andEmail:(NSString *)email;
 
 /** Logout the currently logged in user
- *
  * After logout, Helpshift falls back to the default device login.
- *
- * Available in SDK version 5.0.0 or later
- *
+ * @available Available in SDK version 5.0.0 or later
  */
 + (void) logout;
 
 /** Set the name and email of the application user.
- *
- *
  *   @param name The name of the user.
  *   @param email The email address of the user.
- *
- *   Available in SDK version 5.0.0 or later
+ *   @available Available in SDK version 5.0.0 or later
  */
 
 + (void) setName:(NSString *)name andEmail:(NSString *)email;
 
 /** Register the deviceToken to enable push notifications
- *
- *
  * To enable push notifications in the Helpshift iOS SDK, set the Push Notifications’ deviceToken using this method inside your application:didRegisterForRemoteNotificationsWithDeviceToken application delegate.
- *
  *  @param deviceToken The deviceToken received from the push notification servers.
- *
- *  Available in SDK version 5.0.0 or later
- *
+ *  @available Available in SDK version 5.0.0 or later
  */
 + (void) registerDeviceToken:(NSData *)deviceToken;
 
 /**
- *  Pass along a notification to the Helpshift SDK to handle
- *
- *  @param notification   Notification dictionary
+ *  Pass along the userInfo dictionary (received with a UNNotification) for the Helpshift SDK to handle
+ *  @param userInfo   dictionary contained in the UNNotification object received in App delegate.
  *  @param viewController The viewController on which you want the Helpshift SDK stack to be shown
- *
- *  @return BOOL value indicating whether Helpshift handled this push notification.
- */
-+ (BOOL) handleRemoteNotification:(NSDictionary *)notification withController:(UIViewController *)viewController;
-
-/**
- *  Pass along a notification to the Helpshift SDK to handle
- *
- *  @param notification   Notification dictionary
  *  @param isAppLaunch    A boolean indicating whether the app was lanuched from a killed state. This parameter should ideally only be true in case when called from app's didFinishLaunchingWithOptions delegate.
- *  @param viewController The viewController on which you want the Helpshift SDK stack to be shown
- *
- *  @return BOOL value indicating whether Helpshift handled this push notification.
+ *  @return BOOL value indicating whether Helpshift handled this notification.
+ *  @available Available in SDK version 6.4.0 or later
  */
-+ (BOOL) handleRemoteNotification:(NSDictionary *)notification isAppLaunch:(BOOL)isAppLaunch withController:(UIViewController *)viewController;
++ (BOOL) handleNotificationWithUserInfoDictionary:(NSDictionary *)userInfo isAppLaunch:(BOOL)isAppLaunch withController:(UIViewController *)viewController;
 
 /**
- *  Pass along a local notification to the Helpshift SDK
- *
- *  @param notification   notification object received in the Application's delegate method
- *  @param viewController The viewController on which you want the Helpshift SDK stack to be shown
- *
- *  @return BOOL value indicating whether Helpshift handled this push notification.
- */
-+ (BOOL) handleLocalNotification:(UILocalNotification *)notification withController:(UIViewController *)viewController;
-
-/**
- *  Pass along an interactive notification to the Helpshift SDK
- *
- *  @param notification      notification object received in the Application's delegate
- *  @param actionIdentifier  identifier of the action which was executed in the notification
+ *  Pass along the notification response information for Helpshift SDK to handle
+ *  @param actionIdentifier identifier of the action which was executed in the notification
+ *  @param userInfo userInfo Dictionary received (contained in the UNNotificationResponse object)
  *  @param completionHandler completion handler
- *
  *  @return BOOL value indicating whether Helpshift handled this push notification.
+ *  @available Available in SDK version 6.4.0 or later
  */
-+ (BOOL) handleInteractiveRemoteNotification:(NSDictionary *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler;
-
-/**
- *  Pass along an interactive local notification to the Helpshift SDK
- *
- *  @param notification      notification object received in the Application's delegate
- *  @param actionIdentifier  identifier of the action which was executed in the notification
- *  @param completionHandler completion handler
- *
- *  @return BOOL value indicating whether Helpshift handled this push notification.
- */
-+ (BOOL) handleInteractiveLocalNotification:(UILocalNotification *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler;
++ (BOOL) handleNotificationResponseWithActionIdentifier:(NSString *)actionIdentifier userInfo:(NSDictionary *)userInfo completionHandler:(void (^)())completionHandler;
 
 /**
  *  If an app is woken up in the background in response to a background session being completed, call this API from the
  *  Application's delegate method. Helpshift SDK extensively uses background NSURLSessions for data syncing.
- *
  *  @param identifier        identifier of the background session
  *  @param completionHandler completion handler
- *
  *  @return BOOL value indicating whether Helpshift handled this push notification.
  */
 + (BOOL) handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler;
+
+/** Change the SDK language. By default, the device's prefered language is used.
+ * The call will fail in the following cases :
+ * 1. If a Helpshift session is already active at the time of invocation
+ * 2. Language code is incorrect
+ * 3. Corresponding localization file is not found
+ * @param languageCode the string representing the language code. For example, use 'fr' for French.
+ * @available Available in SDK version 6.1.0 or later
+ */
+
++ (void) setLanguage:(NSString *)languageCode;
+
+#pragma mark - Deprecated APIs
 
 /** Change the SDK language. By default, the device's prefered language is used.
  *  If a Helpshift session is already active at the time of invocation, this call will fail and will return false.
@@ -303,17 +259,69 @@ typedef enum HsEnableContactUs
  */
 + (BOOL) setSDKLanguage:(NSString *)languageCode __deprecated_msg("Use setLanguage: instead");
 
-/** Change the SDK language. By default, the device's prefered language is used.
- * The call will fail in the following cases :
- * 1. If a Helpshift session is already active at the time of invocation
- * 2. Language code is incorrect
- * 3. Corresponding localization file is not found
+/**
+ *  Pass along a notification to the Helpshift SDK to handle
  *
- * @param languageCode the string representing the language code. For example, use 'fr' for French.
+ *  @param notification   Notification dictionary
+ *  @param viewController The viewController on which you want the Helpshift SDK stack to be shown
  *
- * @available Available in SDK version 6.1.0 or later
+ *  @return BOOL value indicating whether Helpshift handled this push notification.
  */
++ (BOOL) handleRemoteNotification:(NSDictionary *)notification withController:(UIViewController *)viewController __deprecated_msg("Use handleNotificationWithUserInfoDictionary:isAppLaunch:withController: instead");
 
-+ (void) setLanguage:(NSString *)languageCode;
+/**
+ *  Pass along a notification to the Helpshift SDK to handle
+ *
+ *  @param notification   Notification dictionary
+ *  @param isAppLaunch    A boolean indicating whether the app was lanuched from a killed state. This parameter should ideally only be true in case when called from app's didFinishLaunchingWithOptions delegate.
+ *  @param viewController The viewController on which you want the Helpshift SDK stack to be shown
+ *
+ *  @return BOOL value indicating whether Helpshift handled this push notification.
+ */
++ (BOOL) handleRemoteNotification:(NSDictionary *)notification isAppLaunch:(BOOL)isAppLaunch withController:(UIViewController *)viewController __deprecated_msg("Use handleNotificationWithUserInfoDictionary:isAppLaunch:withController: instead");
+
+/**
+ *  Pass along a local notification to the Helpshift SDK
+ *
+ *  @param notification   notification object received in the Application's delegate method
+ *  @param viewController The viewController on which you want the Helpshift SDK stack to be shown
+ *
+ *  @return BOOL value indicating whether Helpshift handled this push notification.
+ */
++ (BOOL) handleLocalNotification:(UILocalNotification *)notification withController:(UIViewController *)viewController __deprecated_msg("Use handleNotificationWithUserInfoDictionary:isAppLaunch:withController: instead");
+
+/**
+ *  Pass along an interactive local notification to the Helpshift SDK
+ *
+ *  @param notification      notification object received in the Application's delegate
+ *  @param actionIdentifier  identifier of the action which was executed in the notification
+ *  @param completionHandler completion handler
+ *
+ *  @return BOOL value indicating whether Helpshift handled this push notification.
+ */
++ (BOOL) handleInteractiveLocalNotification:(UILocalNotification *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler  __deprecated_msg("Use handleInteractiveLocalNotificationWithUserInfoDictionary:forAction:completionHandler: instead");
+
+/**
+ *  Pass along an interactive notification to the Helpshift SDK
+ *
+ *  @param notification      notification object received in the Application's delegate
+ *  @param actionIdentifier  identifier of the action which was executed in the notification
+ *  @param completionHandler completion handler
+ *
+ *  @return BOOL value indicating whether Helpshift handled this push notification.
+ */
++ (BOOL) handleInteractiveRemoteNotification:(NSDictionary *)notification forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler __deprecated_msg("Use handleNotificationResponseWithActionIdentifier:userInfo:completionHandler: instead");
+
+/**
+ *  Pass along an interactive local notification's userInfo to the Helpshift SDK
+ *
+ *  @param userInfo      userInfo  received in the notification
+ *  @param actionIdentifier  identifier of the action which was executed in the notification
+ *  @param completionHandler completion handler
+ *
+ *  @return BOOL value indicating whether Helpshift handled this push notification.
+ */
++ (BOOL) handleInteractiveLocalNotificationWithUserInfoDictionary:(NSDictionary *)userInfo forAction:(NSString *)actionIdentifier completionHandler:(void (^)())completionHandler __deprecated_msg("Use handleNotificationResponseWithActionIdentifier:userInfo:completionHandler: instead");
+
 
 @end

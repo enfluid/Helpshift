@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "No se ha encontrado una sección de P+F con el id. correspondiente.";
 
 "GIFs are not supported" = "Los GIF no se admiten";
+
+"Reply from customer support" = "Respuesta de atención al cliente";
+"Failed to send the message" = "Error al enviar el mensaje";
+"Start a new Conversation" = "Comienza una nueva conversación";
+"Audio" = "Audio";
+"Video" = "Vídeo";
+"File" = "Archivo";
+"Would you like to review the app?" = "¿Le gustaría calificar la aplicación?";

@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "আমরা এই আইডি সংশ্লিষ্ট কোনো  FAQ বিভাগ খুঁজে পাইনি";
 
 "GIFs are not supported" = "GIF সমর্থিত হয় না";
+
+"Reply from customer support" = "গ্রাহক সমর্থন থেকে উত্তর";
+"Failed to send the message" = "বার্তা পাঠাতে ব্যর্থ হয়েছে";
+"Start a new Conversation" = "একটি নতুন কথোপকথন শুরু করুন";
+"Audio" = "অডিও";
+"Video" = "ভিডিও";
+"File" = "ফাইল";
+"Would you like to review the app?" = "আপনি অ্যাপ্লিকেশন পর্যালোচনা করতে চান?";

@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "متن مبدا - قادر به یافتن بخش سوالات رایج با شناسه مربوطه نبودیم.";
 
 "GIFs are not supported" = "GIF ها پشتیبانی نمی شوند";
+
+"Reply from customer support" = "پاسخ از پشتیبانی مشتری";
+"Failed to send the message" = "پیغام ارسال نشد";
+"Start a new Conversation" = "یک مکالمه جدید شروع کنید";
+"Audio" = "صوتی";
+"Video" = "ویدئو";
+"File" = "پرونده";
+"Would you like to review the app?" = "آیا می خواهید برنامه را ارزیابی کنید؟";

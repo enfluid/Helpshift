@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Nebija iespējams atrast BUJ sadaļu ar atbilstošu ID";
 
 "GIFs are not supported" = "GIF faili netiek atbalstīti";
+
+"Reply from customer support" = "Atbilde no klientu atbalsta";
+"Failed to send the message" = "Neizdevās nosūtīt ziņu";
+"Start a new Conversation" = "Sāciet jaunu sarunu";
+"Audio" = "Audio";
+"Video" = "Video";
+"File" = "Fails";
+"Would you like to review the app?" = "Vai vēlaties pārskatīt lietotni?";

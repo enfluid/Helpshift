@@ -1,6 +1,6 @@
 /*
  *    HelpshiftSupport.h
- *    SDK Version 6.2.0
+ *    SDK Version 6.4.1
  *
  *    Get the documentation at http://www.helpshift.com/docs
  *
@@ -345,7 +345,7 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  * @param isRemote Whether the notification count is to be returned asynchronously via delegate mechanism or synchronously as a return val for this api
  *
  * @available Available in SDK version 5.0.0 or later
- * @depricated Deprecated in SDK version 6.1.0
+ * @deprecated Deprecated in SDK version 6.1.0
  */
 
 + (NSInteger) getNotificationCountFromRemote:(BOOL)isRemote __deprecated_msg("Use requestUnreadMessagesCount instead.");
@@ -368,54 +368,6 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  */
 
 + (void) requestUnreadMessagesCount:(BOOL)isRemote;
-
-/** Forward the push notification for the Helpshift lib to handle
- *
- *
- * To show support on Notification opened, call handleRemoteNotification in your application:didReceiveRemoteNotification application delegate.
- * If the value of the “origin” field is “helpshift” call the handleRemoteNotification api
- *
- *  @param notification The dictionary containing the notification information
- *  @param viewController ViewController on which the helpshift support screen will show up.
- *
- *  @code
- *  Example usage
- *  - (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
- *  {
- *      if ([[userInfo objectForKey:@"origin"] isEqualToString:@"helpshift"]) {
- *          [HelpshiftSupport handleRemoteNotification:userInfo withController:self.viewController];
- *      }
- *  }
- *  @endcode
- *
- *  Available in SDK version 5.0.0 or later
- *
- */
-+ (void) handleRemoteNotification:(NSDictionary *)notification withController:(UIViewController *)viewController;
-
-/** Forward the local notification for the Helpshift lib to handle
- *
- *
- * To show support on Notification opened, call handleLocalNotification in your application:didReceiveLocalNotification application delegate.
- * If the value of the “origin” field is “helpshift” call the handleLocalNotification api
- *
- * @param notification The UILocalNotification object containing the notification information
- * @param viewController ViewController on which the helpshift support screen will show up.
- *
- * @code
- * Example usage
- *  - (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
- *  {
- *      if ([[notification.userInfo objectForKey:@"origin"] isEqualToString:@"helpshift"])
- *      [HelpshiftSupport handleLocalNotification:notification withController:self.viewController];
- *  }
- * @endcode
- *
- * Available in SDK version 5.0.0 or later
- *
- */
-
-+ (void) handleLocalNotification:(UILocalNotification *)notification withController:(UIViewController *)viewController;
 
 /** Clears Breadcrumbs list.
  *
@@ -456,12 +408,11 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
  *  This is a wrapper over NSLog. Use this API as a replacement over NSLog for the logs that need to be added as meta data while filing an issue.
  *  This API internally calls NSLog.
  *
- * @param format The format string to be logged.
- * @param ...    Variable arguments list.
+ * @param message       The string to be logged.
  *
- * Available in SDK version 5.9.0 or later
+ * Available in SDK version 6.3.0 or later
  */
-+ (void) log:(NSString *)format, ...;
++ (void) addLog:(NSString *)message;
 
 #pragma mark Dynamic Forms
 
@@ -692,6 +643,22 @@ static NSString *HelpshiftSupportSingleFAQFlow = @"singleFaqFlow";
 - (BOOL) pushDynamicFormOnViewController:(UIViewController *)viewController withTitle:(NSString *)title andFlows:(NSArray *)flows __deprecated;
 
 - (UIViewController *) dynamicFormWithTitle:(NSString *)title andFlows:(NSArray *)flows __deprecated;
+
++ (void) handleRemoteNotification:(NSDictionary *)notification withController:(UIViewController *)viewController __deprecated_msg("Use HelpshiftCore's handleNotificationWithUserInfoDictionary: instead");
+
++ (void) handleLocalNotification:(UILocalNotification *)notification withController:(UIViewController *)viewController __deprecated_msg("Use HelpshiftCore's handleNotificationWithUserInfoDictionary: instead");
+
+/**
+ *  This is a wrapper over NSLog. Use this API as a replacement over NSLog for the logs that need to be added as meta data while filing an issue.
+ *  This API internally calls NSLog.
+ *
+ * @param format The format string to be logged.
+ * @param ...    Variable arguments list.
+ *
+ * Available in SDK version 5.9.0 or later
+ * @deprecated Deprecated in SDK version 6.3.0.
+ */
++ (void) log:(NSString *)format, ... __deprecated_msg("Use addLog method instead.");
 
 @end
 

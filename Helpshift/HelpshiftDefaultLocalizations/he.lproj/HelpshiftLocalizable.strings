@@ -147,3 +147,11 @@
 "We couldn't find an FAQ section with matching ID" = "לא הצלחנו למצוא מקטע של שאלות נפוצות עם מזהה תואם";
 
 "GIFs are not supported" = "קבצי GIF אינם נתמכים";
+
+"Reply from customer support" = "תשובה מתמיכת לקוחות";
+"Failed to send the message" = "שליחת ההודעה נכשלה";
+"Start a new Conversation" = "התחל שיחה חדשה";
+"Audio" = "שֶׁמַע";
+"Video" = "וִידֵאוֹ";
+"File" = "קוֹבֶץ";
+"Would you like to review the app?" = "האם אתה רוצה לדרג את האפליקציה?";

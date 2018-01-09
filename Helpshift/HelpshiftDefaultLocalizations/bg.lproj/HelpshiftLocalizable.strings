@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Не можахме да открием секция от ЧЗВ със съответното ИД";
 
 "GIFs are not supported" = "GIF не се поддържат";
+
+"Reply from customer support" = "Отговор от поддръжка на клиенти";
+"Failed to send the message" = "Изпращането на съобщението не бе успешно";
+"Start a new Conversation" = "Започнете ново разговор";
+"Audio" = "звуков";
+"Video" = "Видео";
+"File" = "досие";
+"Would you like to review the app?" = "Искате ли да прегледате приложението?";

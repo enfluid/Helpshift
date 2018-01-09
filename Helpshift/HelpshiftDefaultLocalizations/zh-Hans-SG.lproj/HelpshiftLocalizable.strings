@@ -4,7 +4,7 @@ Helpshift
 Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 */
 
-"Can't find what you were looking for?" = "找不到所需的答案吗?";
+"Can't find what you were looking for?" = "找不到所需的答案吗？";
 "Rate App" = "评价应用";
 "We\'re happy to help you!" = "我们很乐意为您提供帮助！";
 "Did we answer all your questions?" = "我们有没有回答您的所有问题？";
@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "我们未能找到与ID匹配的常见问题解答章节";
 
 "GIFs are not supported" = "不支持GIF";
+
+"Reply from customer support" = "来自客户支持的回复";
+"Failed to send the message" = "无法发送消息";
+"Start a new Conversation" = "开始一个新的对话";
+"Audio" = "音频";
+"Video" = "视频";
+"File" = "文件";
+"Would you like to review the app?" = "您要查看应用程式吗？";

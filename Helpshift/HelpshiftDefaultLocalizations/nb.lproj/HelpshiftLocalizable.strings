@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Kunne ikke finne Vanlige spørsmål-del med matchende ID";
 
 "GIFs are not supported" = "GIFer støttes ikke";
+
+"Reply from customer support" = "Svar fra kundestøtte";
+"Failed to send the message" = "Kunne ikke sende meldingen";
+"Start a new Conversation" = "Start en ny samtale";
+"Audio" = "Audio";
+"Video" = "Video";
+"File" = "Fil";
+"Would you like to review the app?" = "Vil du vurdere appen?";

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91E148072005828D003D0BD5 /* libHelpshift-bitcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E148062005828D003D0BD5 /* libHelpshift-bitcode.a */; };
 		B65B76CE1F8D96B100CB96BF /* HelpshiftAll.h in Headers */ = {isa = PBXBuildFile; fileRef = B65B76C91F8D967E00CB96BF /* HelpshiftAll.h */; };
 		B65B76CF1F8D96B100CB96BF /* HelpshiftCampaigns.h in Headers */ = {isa = PBXBuildFile; fileRef = B65B76C31F8D967900CB96BF /* HelpshiftCampaigns.h */; };
 		B65B76D01F8D96B100CB96BF /* HelpshiftCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B65B76CC1F8D967F00CB96BF /* HelpshiftCore.h */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91E148062005828D003D0BD5 /* libHelpshift-bitcode.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libHelpshift-bitcode.a"; sourceTree = "<group>"; };
 		B65B76C21F8D967900CB96BF /* HelpshiftInbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpshiftInbox.h; sourceTree = "<group>"; };
 		B65B76C31F8D967900CB96BF /* HelpshiftCampaigns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpshiftCampaigns.h; sourceTree = "<group>"; };
 		B65B76C51F8D967B00CB96BF /* HsLocalization.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HsLocalization.bundle; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91E148072005828D003D0BD5 /* libHelpshift-bitcode.a in Frameworks */,
 				B65B76D41F8D97A600CB96BF /* libHelpshift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,7 @@
 				B65B76CA1F8D967E00CB96BF /* HSThemes */,
 				B65B76CD1F8D967F00CB96BF /* HsUIResourceBundle.bundle */,
 				B65B76C71F8D967D00CB96BF /* libHelpshift.a */,
+				91E148062005828D003D0BD5 /* libHelpshift-bitcode.a */,
 			);
 			path = Helpshift;
 			sourceTree = "<group>";

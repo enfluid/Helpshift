@@ -147,3 +147,11 @@ Copyright (c) 2014 Helpshift,Inc., All rights reserved.
 "We couldn't find an FAQ section with matching ID" = "Eşleşen kimliğe sahip bir SSS bölümü bulamadık";
 
 "GIFs are not supported" = "GIF'ler desteklenmiyor";
+
+"Reply from customer support" = "Müşteri desteğiyle cevap ver";
+"Failed to send the message" = "Mesaj gönderilemedi";
+"Start a new Conversation" = "Yeni bir Konuşma başlat";
+"Audio" = "Ses";
+"Video" = "Video";
+"File" = "Dosya";
+"Would you like to review the app?" = "Uygulamayı derecelendirmek ister misiniz?";
